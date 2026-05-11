@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>数独游戏</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: black;
+            overflow: hidden;
+            touch-action: none;
+        }
+        canvas {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <script src="{{CDN}}pygame.js"></script>
+    <script>
+        window.addEventListener('load', async () => {
+            await pygbag.mount({{FILES}}, "{{PREFIX}}");
+            pygbag.run("{{MAIN}}");
+        });
+    </script>
+</body>
+</html>
